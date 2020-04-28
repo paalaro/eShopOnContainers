@@ -8,7 +8,7 @@ jobs:
 - job: manifest
   condition: and(succeeded(),ne('${{ variables['Build.Reason'] }}', 'PullRequest'))
   dependsOn:
-    # - BuildWindows
+    - BuildWindows
     - BuildLinux  
   pool: 
     name: Default
